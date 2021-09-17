@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FeaturedMovie from '../components/FeaturedMovie'
 import Header from '../components/Header'
+import Loader from '../components/Loader'
 import MovieRow from '../components/MovieRow'
 import { useDataContext } from '../hook/use-data'
 
@@ -28,11 +29,15 @@ const Home = () => {
       <Header />
 
       {featuredMovie && <FeaturedMovie item={featuredMovie} />}
-      <section className='list'>
-        {movieList.map(({ title, items: { data } }, idx) => {
-          return <MovieRow key={idx} title={title} items={data.results} />
-        })}
-      </section>
+      {movieList.length > 0 && (
+        <section className='list'>
+          {movieList.map(({ title, items: { data } }, idx) => {
+            return <MovieRow key={idx} title={title} items={data.results} />
+          })}
+        </section>
+      )}
+
+      {!movieList.length > 0 && <Loader />}
     </>
   )
 }

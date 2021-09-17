@@ -327,3 +327,31 @@ header.black {
 .search--input:focus {
   width: 500px;
 }
+
+button[data-direction='left'],
+button[data-direction='right'] {
+  border: none;
+  position: absolute;
+  width: 40px;
+  height: 225px;
+  background-color: rgba(0, 0, 0, 0.685);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+
+button[data-direction='left'] {
+  left: 0;
+}
+button[data-direction='right'] {
+  right: 0;
+}
+.movieRow:hover button[data-direction='left'],
+.movieRow:hover button[data-direction='right'] {
+  opacity: 1;
+}

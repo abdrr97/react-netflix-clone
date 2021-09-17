@@ -29,28 +29,98 @@ const DataProvider = ({ children }) => {
       },
       {
         slug: 'action',
-        title: 'Action',
+        title: 'action',
         items: await fetchData(`/discover/movie?with_genres=28&api_key=${API_KEY}`),
       },
       {
+        slug: 'adventure',
+        title: 'adventure',
+        items: await fetchData(`/discover/movie?with_genres=12&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'animation',
+        title: 'animation',
+        items: await fetchData(`/discover/movie?with_genres=16&api_key=${API_KEY}`),
+      },
+      {
         slug: 'comedy',
-        title: 'Comedy',
+        title: 'comedy',
         items: await fetchData(`/discover/movie?with_genres=35&api_key=${API_KEY}`),
       },
       {
-        slug: 'horror',
-        title: 'Horror',
-        items: await fetchData(`/discover/movie?with_genres=27&api_key=${API_KEY}`),
-      },
-      {
-        slug: 'romance',
-        title: 'Romance',
-        items: await fetchData(`/discover/movie?with_genres=10749&api_key=${API_KEY}`),
+        slug: 'crime',
+        title: 'crime',
+        items: await fetchData(`/discover/movie?with_genres=80&api_key=${API_KEY}`),
       },
       {
         slug: 'documentary',
-        title: 'Documentary',
+        title: 'documentary',
         items: await fetchData(`/discover/movie?with_genres=99&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'drama',
+        title: 'drama',
+        items: await fetchData(`/discover/movie?with_genres=18&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'family',
+        title: 'family',
+        items: await fetchData(`/discover/movie?with_genres=10751&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'fantasy',
+        title: 'fantasy',
+        items: await fetchData(`/discover/movie?with_genres=14&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'history',
+        title: 'history',
+        items: await fetchData(`/discover/movie?with_genres=36&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'horror',
+        title: 'horror',
+        items: await fetchData(`/discover/movie?with_genres=27&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'music',
+        title: 'music',
+        items: await fetchData(`/discover/movie?with_genres=10402&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'mystery',
+        title: 'mystery',
+        items: await fetchData(`/discover/movie?with_genres=9648&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'romance',
+        title: 'romance',
+        items: await fetchData(`/discover/movie?with_genres=10749&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'science',
+        title: 'science',
+        items: await fetchData(`/discover/movie?with_genres=878&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'thriller',
+        title: 'thriller',
+        items: await fetchData(`/discover/movie?with_genres=53&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'tv',
+        title: 'tv',
+        items: await fetchData(`/discover/movie?with_genres=10770&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'war',
+        title: 'war',
+        items: await fetchData(`/discover/movie?with_genres=10752&api_key=${API_KEY}`),
+      },
+      {
+        slug: 'western',
+        title: 'western',
+        items: await fetchData(`/discover/movie?with_genres=37&api_key=${API_KEY}`),
       },
     ]
   }
